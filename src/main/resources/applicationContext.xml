@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean
+        id="userConfigBean" class="com.example.springone.bean.UserConfig">
+        <property name="className" value="springg"/>
+        <property name="name" value="Tanishq"/>
+    </bean>
+    <bean
+        id="userService" class="com.example.springone.service.userService">
+        <constructor-arg ref="userConfigBean"/>
+    </bean>
+    <bean
+        id="orderService" class="com.example.springone.service.OrderService"
+        factory-method="creatInstance">
+        <constructor-arg ref="userConfigBean"/>
+        <constructor-arg ref="userService"/>
+
+    </bean>
+<!--        <pr-->
+
+</beans>
