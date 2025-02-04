@@ -25,12 +25,12 @@ public class SpringoneApplication {
 //		UserConfig userConfig = (UserConfig) context.getBean("userConfig");
 
 		//For Proxies
-		man mohan = new man("Mohan", 30, "Delhi", "India");
-		ClassLoader classLoader = man.class.getClassLoader();
-		Class[] interfaces =new Class[]{Person.class};
-		System.out.println("11");
-		Person proxymohan=(Person) Proxy.newProxyInstance(classLoader,interfaces,new PersonInvocationHandler(mohan));
-		proxymohan.introduce(mohan.getName());
-		System.out.println("22");
+//		man mohan = new man("Mohan", 30, "Delhi", "India");
+//		ClassLoader classLoader = man.class.getClassLoader();
+//		Class[] interfaces =new Class[]{Person.class};
+//		System.out.println("11");
+//		Person proxymohan=(Person) Proxy.newProxyInstance(classLoader,interfaces,new PersonInvocationHandler(mohan));
+//		proxymohan.introduce(mohan.getName());
+//		System.out.println("22");
 	}
 }
